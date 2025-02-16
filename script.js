@@ -118,12 +118,12 @@ function playAgain(){
 
 let timer;
 function startTimer() {
-    let timeLeft = 45; // 45 seconds countdown
+    let timeLeft = 30; // 30 seconds countdown
     timer = setInterval(() => {
         document.getElementById("time").textContent = timeLeft + "s";
         timeLeft--;
 
-        if(timeLeft < 15){
+        if(timeLeft < 10){
             document.getElementById("time").style.color = "red";
         }
 
