@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Memory-Matching Game</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+        <div id="home-page">
+            <div class="theme-text">Select Theme</div>
+            <div class="themes">
+                <div class="theme" id="diamonds">
+                    <img src="images/diamonds/img-3.png" alt="diamond-img">
+                    <div>Diamonds</div>
+                </div>
+                <div class="theme" id="fruits">
+                    <img src="images/fruits/img-1.png" alt="diamond-img">
+                    <div>Fruits</div>
+                </div>
+                <div class="theme" id="animals">
+                    <img src="images/animals/img-2.png" alt="diamond-img">
+                    <div>Animals</div>
+                </div>
+                <div class="theme" id="flowers">
+                    <img src="images/flowers/img-4.png" alt="diamond-img">
+                    <div>Flowers</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game" id="game"> 
+            <div class="score-timer">
+                <div class="timer">
+                    Timer: <span id="time">45s</span>
+                </div>
+                <div class="score">
+                    Score: <span id="score">0</span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="wrapper">
+                    <ul class="cards">
+                        <li class="card">
+                            <div class="view front-view">
+                                <span class="material-icons">question_mark</span>
+                            </div>
+                            <div class="view back-view">
+                                <img src="images/diamonds/img-1.png" alt="diamond-img">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="view front-view">
+                                <span class="material-icons">question_mark</span>
+                            </div>
+                            <div class="view back-view">
+                                <img src="images/diamonds/img-2.png" alt="diamond-img">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="view front-view">
+                                <span class="material-icons">question_mark</span>
+                            </div>
+                            <div class="view back-view">
+                                <img src="images/diamonds/img-3.png" alt="diamond-img">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="view front-view">
+                                <span class="material-icons">question_mark</span>
+                            </div>
+                            <div class="view back-view">
+                                <img src="images/diamonds/img-4.png" alt="diamond-img">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="view front-view">
+                                <span class="material-icons">question_mark</span>
+                            </div>
+                            <div class="view back-view">
+                                <img src="images/diamonds/img-5.png" alt="diamond-img">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="view front-view">
+                                <span class="material-icons">question_mark</span>
+                            </div>
+                            <div class="view back-view">
+                                <img src="images/diamonds/img-6.png" alt="diamond-img">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="view front-view">
+                                <span class="material-icons">question_mark</span>
+                            </div>
+                            <div class="view back-view">
+                                <img src="images/diamonds/img-7.png" alt="diamond-img">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="view front-view">
+                                <span class="material-icons">question_mark</span>
+                            </div>
+                            <div class="view back-view">
+                                <img src="images/diamonds/img-8.png" alt="diamond-img">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="view front-view">
+                                <span class="material-icons">question_mark</span>
+                            </div>
+                            <div class="view back-view">
+                                <img src="images/diamonds/img-1.png" alt="diamond-img">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="view front-view">
+                                <span class="material-icons">question_mark</span>
+                            </div>
+                            <div class="view back-view">
+                                <img src="images/diamonds/img-2.png" alt="diamond-img">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="view front-view">
+                                <span class="material-icons">question_mark</span>
+                            </div>
+                            <div class="view back-view">
+                                <img src="images/diamonds/img-3.png" alt="diamond-img">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="view front-view">
+                                <span class="material-icons">question_mark</span>
+                            </div>
+                            <div class="view back-view">
+                                <img src="images/diamonds/img-4.png" alt="diamond-img">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="view front-view">
+                                <span class="material-icons">question_mark</span>
+                            </div>
+                            <div class="view back-view">
+                                <img src="images/diamonds/img-5.png" alt="diamond-img">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="view front-view">
+                                <span class="material-icons">question_mark</span>
+                            </div>
+                            <div class="view back-view">
+                                <img src="images/diamonds/img-6.png" alt="diamond-img">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="view front-view">
+                                <span class="material-icons">question_mark</span>
+                            </div>
+                            <div class="view back-view">
+                                <img src="images/diamonds/img-7.png" alt="diamond-img">
+                            </div>
+                        </li>
+                        <li class="card">
+                            <div class="view front-view">
+                                <span class="material-icons">question_mark</span>
+                            </div>
+                            <div class="view back-view">
+                                <img src="images/diamonds/img-8.png" alt="diamond-img">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="start-button">
+                <button onclick="startGame()">Start Game</button>
+            </div>
+
+            <div class="result">
+                <div><span class="congo-text">Congo!</span> You have matched <span class="matchedPercentage"></span> of cards</div>
+                <div>Your Final Score : <span class="final-score"></span></div>
+                <button class="play-again" onclick="playAgain()">Wanna Play Again ?</button>
+            </div>
+            <div class="play-again-themes">
+                <div class="play-again-theme-text"> Select a theme </div>
+                <div class="theme-buttons">
+                    <button id="diamonds" onclick="shuffleCard('diamonds')">Diamonds</button>
+                    <button id="animals" onclick="shuffleCard('animals')">Animals</button>
+                    <button id="fruits" onclick="shuffleCard('fruits')">Fruits</button>
+                    <button id="flowers" onclick="shuffleCard('flowers')">Flowers</button>
+                </div>
+            </div>
+        </div>
+        
+        <script src="script.js"></script>
+    </body>
+</html>

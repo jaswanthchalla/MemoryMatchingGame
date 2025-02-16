@@ -1,0 +1,305 @@
+@import url('https:googleapis.com/css2?family=Poppins:wght@400;500;600;700@display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+body{
+    background: #EAD7BB;
+    color: #0c0501;
+}
+
+.game, .congo-text{
+    display: none;
+}
+
+.theme-text{
+    text-align: center;
+    margin: 1.5rem auto;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.themes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    padding-left : 20px;
+    padding-right: 20px;
+    max-height: 100vh;
+    align-items: center;
+    justify-items: center;
+    margin: auto 8px;
+}
+
+.theme{
+    background: #f8f1ee;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.theme:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.theme img {
+    width: 100%;
+    transform: scale(0.6);
+}
+
+.score-timer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #2E2E2E;
+    font-weight: 600;
+}
+
+.container{
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    height: 400px;
+    width: 400px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.cards, .card, .view{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards{
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cards .card{
+    cursor: pointer;
+    position: relative;
+    perspective: 800px;
+    transform-style: preserve-3d;
+    height: calc(100%/4 - 10px);
+    width: calc(100%/4 - 10px);
+}
+
+.card.shake{
+    animation: shake 0.35s ease-in;
+}
+
+@keyframes shake {
+    0%, 100%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(-13px);
+    }
+    40%{
+        transform: translateX(13px);
+    }
+    60%{
+        transform: translateX(-8px);
+    }
+    80%{
+        transform: translateX(8px);
+    }
+}
+
+.cards .card .view{
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    background: #fff;
+    border-radius: 7px;
+    backface-visibility: hidden;
+    transition: transform 0.25s linear;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.card .front-view span{
+    color: #d3840d;
+    font-size: 40px;
+}
+
+.card .back-view{
+    transform: rotateY(-180deg);
+}
+
+.card.flip .back-view{
+    transform: rotateY(0);
+}
+
+.card.flip .front-view{
+    transform: rotateY(180deg);
+}
+
+.card .back-view img{
+    max-width: 45px;
+}
+
+.start-button{
+    margin-top: 23px;
+    text-align: center;
+}
+
+.start-button button {
+    background-color: #d3840d; 
+    border-radius: 50px;
+    box-shadow: rgba(211, 132, 13, 0.4) 0 -12px 8px -10px inset,
+                rgba(211, 132, 13, 0.25) 0 4px 6px,
+                rgba(211, 132, 13, 0.2) 0 6px 12px;
+    color: white; 
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 200ms ease-in-out;
+    border: none;
+}
+  
+.start-button button:hover {
+    box-shadow: rgba(211, 132, 13, 0.6) 0 -12px 8px -10px inset,
+                rgba(211, 132, 13, 0.35) 0 4px 6px,
+                rgba(211, 132, 13, 0.3) 0 6px 12px;
+    transform: scale(1.05);
+    background-color: #c3770c;
+}
+  
+.result{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    font-size: 1.3rem;
+}
+
+.play-again-themes{
+    text-align: center;
+    display: none;
+}
+
+.play-again-theme-text{
+    margin: 0.5rem auto;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.theme-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+.play-again, .theme-buttons button{
+    background-color: #D88C5E; 
+    border-radius: 50px;
+    box-shadow: rgba(216, 140, 94, 0.2) 0 -15px 10px -10px inset,
+                rgba(216, 140, 94, 0.15) 0 2px 4px, 
+                rgba(216, 140, 94, 0.15) 0 4px 8px;
+    color: white;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    padding: 10px 25px;
+    font-size: 16px;
+    transition: all 200ms ease-in-out;
+    border: none;
+}
+  
+.play-again:hover, .theme-buttons button:hover{
+    box-shadow: rgba(216, 140, 94, 0.35) 0 -15px 10px -10px inset,
+                rgba(216, 140, 94, 0.25) 0 2px 4px, 
+                rgba(216, 140, 94, 0.25) 0 4px 8px;
+    transform: scale(1.05);
+}
+  
+
+@media (max-width: 500px){
+    .themes{
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 0.8rem;
+        padding-left : 5px;
+        padding-right: 5px;
+        margin: auto 5px;
+    }
+    .theme{
+        font-size: 1.1rem;
+    }
+
+    .container{
+        margin: 2rem auto;
+    }
+
+    .wrapper{
+        height: 300px;
+        width: 300px;
+        background-color: #f8f8f8;
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    .card.shake{
+        animation: shakeMob 0.35s ease-in;
+    }
+    
+    @keyframes shakeMob {
+        0%, 100%{
+            transform: translateX(0);
+        }
+        20%{
+            transform: translateX(-7px);
+        }
+        40%{
+            transform: translateX(7px);
+        }
+        60%{
+            transform: translateX(-3px);
+        }
+        80%{
+            transform: translateX(3px);
+        }
+    }
+
+    .cards .card{
+        perspective: 400px;
+        transform-style: flat;
+        height: calc(100%/4 - 6px);
+        width: calc(100%/4 - 6px);
+    }
+
+    .card .front-view span{
+        font-size: 30px;
+    }
+
+    .card .back-view img{
+        max-width: 35px;
+    }
+}
