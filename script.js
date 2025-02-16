@@ -80,7 +80,7 @@ function shuffleCard(theme){
     disableClick = false;
     card1 = card2 = "";
     document.querySelector(".start-button").style.display = 'block';
-    document.getElementById("time").textContent = 45 + "s";
+    document.getElementById("time").textContent = 30 + "s";
     document.getElementById("score").textContent = 0;
     document.querySelector(".final-score").textContent = 0;
     document.querySelector('.play-again-themes').style.display = "none";
