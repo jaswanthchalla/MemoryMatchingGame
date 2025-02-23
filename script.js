@@ -13,22 +13,20 @@ function displayGame(themeId){
     shuffleCard(themeId);
 }
 
-//Functions for Playing Game
-
 const cards = document.querySelectorAll(".card");
 
 
 function startGame(){
     document.querySelector(".start-button").style.display = 'none';
     cards.forEach(card => {
-        card.addEventListener("click", flipCard);
+        card.addEventListener("click", handleCardClick);
     });
     startTimer();
 }
 
 let card1, card2,disableClick = false, matchedCards = 0;
 
-function flipCard(e){
+function handleCardClick(e){
     let clickedCard = e.target;
     if(clickedCard !== card1 && !disableClick){
         clickedCard.classList.add("flip");
@@ -54,8 +52,8 @@ function matchCards(img1, img2){
             displayScore();
             return;
         }
-        card1.removeEventListener("click", flipCard);
-        card2.removeEventListener("click", flipCard);
+        card1.removeEventListener("click", handleCardClick);
+        card2.removeEventListener("click", handleCardClick);
         card1 = card2 = "";
         disableClick = false;
         return;
@@ -96,7 +94,7 @@ function shuffleCard(theme){
 
 function displayScore(){
     cards.forEach(card => {
-        card.removeEventListener("click", flipCard);
+        card.removeEventListener("click", handleCardClick);
     });
     const resultEle = document.querySelector('.result');
     const finalScore = document.querySelector(".final-score");
